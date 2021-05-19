@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import tn.esprit.esponline.entities.User;
 
+import java.util.List;
+
 @Repository
 public interface UserRepository extends JpaRepository<User,Long> {
 		
@@ -17,5 +19,6 @@ public interface UserRepository extends JpaRepository<User,Long> {
 		User findByUsernameAndEmail(String username,String email);
 		
 		User findByUsernameAndPassword(String username,String password);
+
 
 }

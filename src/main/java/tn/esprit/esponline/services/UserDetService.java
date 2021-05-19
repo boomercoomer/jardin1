@@ -1,0 +1,27 @@
+package tn.esprit.esponline.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+import tn.esprit.esponline.model.User;
+import tn.esprit.esponline.model.UserDet;
+import tn.esprit.esponline.repository.Userrepository2;
+
+@Service
+public class UserDetService implements UserDetailsService {
+	
+	
+	@Autowired
+	private Userrepository2 userRepository;
+		
+	@Override
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+		 User user = this.userRepository.findByUserName(userName);
+		 UserDet userDet = new UserDet(user); 
+
+		 
+		 return userDet ; 
+	}
+}
