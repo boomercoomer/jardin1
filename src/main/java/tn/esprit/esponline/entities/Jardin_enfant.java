@@ -138,6 +138,12 @@ public class Jardin_enfant implements Serializable {
 	public void setNumForm(int numForm) {
 		this.numForm = numForm;
 	}
-	
 
+	public Jardin_enfant() {
+	}
+
+	public Jardin_enfant(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 }

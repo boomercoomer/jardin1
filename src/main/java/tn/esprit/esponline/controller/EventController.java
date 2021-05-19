@@ -25,6 +25,7 @@ public class EventController {
 	
 	
     //http://localhost:8081/springMVC/servlet/events/add/{jardin-id}/{user-id}
+    //2/1
     @PostMapping("/events/add/{jardin-id}/{user-id}")
     public Event addEvent(@RequestBody Event Event,@PathVariable("jardin-id")int idjardin,@PathVariable("user-id")long userid) {
     	return eventService.save(Event,idjardin,userid);}
