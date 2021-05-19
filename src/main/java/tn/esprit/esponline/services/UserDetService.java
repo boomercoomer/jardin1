@@ -5,8 +5,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import tn.esprit.esponline.model.User;
-import tn.esprit.esponline.model.UserDet;
+import tn.esprit.esponline.entities.User;
+import tn.esprit.esponline.entities.UserDet;
 import tn.esprit.esponline.repository.Userrepository2;
 
 @Service
@@ -18,7 +18,7 @@ public class UserDetService implements UserDetailsService {
 		
 	@Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-		 User user = this.userRepository.findByUserName(userName);
+		 User user = this.userRepository.findByUsername(userName);
 		 UserDet userDet = new UserDet(user); 
 
 		 

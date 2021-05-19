@@ -2,6 +2,7 @@ package tn.esprit.esponline.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -423,6 +424,13 @@ public class User implements Serializable{
 
 	public void setMessages(List<Message> messages) {
 		this.messages = messages;
+	}
+	public List<Role> getRoleList(){
+
+		List<Role> list = new ArrayList<>();
+		List<Role> l =  Arrays.asList(Role.values());
+		list.addAll(l);
+		return list;
 	}
 
 

@@ -1,4 +1,4 @@
-package tn.esprit.esponline.model;/*package tn.esprit.esponline.model;
+package tn.esprit.esponline.entities;/*package tn.esprit.esponline.model;
 
 import java.util.Base64;
 

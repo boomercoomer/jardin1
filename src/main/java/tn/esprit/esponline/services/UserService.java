@@ -1,6 +1,6 @@
 package tn.esprit.esponline.services;
 
-import tn.esprit.esponline.model.User;
+import tn.esprit.esponline.entities.User;
 
 import java.util.List;
 
